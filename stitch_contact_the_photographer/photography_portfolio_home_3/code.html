@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Photography Portfolio Home</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b19e6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#141121",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    animation: {
+                        'fade-in': 'fadeIn 2s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for sidebar to keep it clean */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Summary marker removal for cleaner accordion */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden selection:bg-primary selection:text-white">
+<div class="flex h-screen w-full flex-col md:flex-row">
+<!-- Sidebar Navigation -->
+<nav class="flex-none w-full md:w-80 h-auto md:h-full bg-[#121118] border-b md:border-b-0 md:border-r border-white/5 flex flex-col justify-between z-20 relative shadow-2xl">
+<!-- Top Section: Profile & Nav -->
+<div class="flex flex-col p-8 overflow-y-auto no-scrollbar">
+<!-- Profile Header -->
+<div class="flex flex-col gap-4 mb-10">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-12 ring-2 ring-white/10" data-alt="Photographer profile portrait showing a silhouette against a sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCiz7Li6GvwDMN1fMjbOxw21K8RyxglPBd4Cd3HnbqLRA1pfI62DT2-jkHCQKzFZUhPJGN-XiArkZPl9SUOwnoDISp21t_59Ym6LLhH-4NfWv4lb0O7weGegh-lwtWwvjzIU7g33YkDF_jOAdvFNMKGorPYDQqs-bRMoxUOo1EeyXn-2-coo86fn3-NuLJxr0q4k_GbKfO1Q3wA4sV-5RL4v9x9cwAOJ23eJqklJFFP5kZt3TSGhSxGWiUJ_6J_E_Hb4HumvZNcnU8");'>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-lg font-bold tracking-wide leading-tight">Elena Vance</h1>
+<p class="text-slate-400 text-xs font-medium tracking-widest uppercase mt-1">Visual Artist</p>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col gap-2">
+<!-- Home (Active) -->
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 group transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">home</span>
+<p class="text-white text-sm font-semibold tracking-wide">Home</p>
+</a>
+<!-- Galleries Accordion -->
+<details class="group rounded-lg transition-colors duration-300">
+<summary class="flex cursor-pointer items-center justify-between gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors duration-300 select-none">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">photo_library</span>
+<p class="text-slate-300 text-sm font-medium tracking-wide group-hover:text-white transition-colors">Galleries</p>
+</div>
+<span class="material-symbols-outlined text-slate-500 text-lg transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<!-- Dropdown Items -->
+<div class="flex flex-col pl-12 pr-2 pb-2 gap-1 mt-1 border-l border-white/5 ml-6">
+<a class="px-3 py-2 rounded-md hover:bg-white/5 text-slate-400 hover:text-white text-sm transition-colors flex justify-between items-center group/item" href="#">
+<span>Venezuela</span>
+<span class="material-symbols-outlined text-[10px] opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+<a class="px-3 py-2 rounded-md hover:bg-white/5 text-slate-400 hover:text-white text-sm transition-colors flex justify-between items-center group/item" href="#">
+<span>Colombia</span>
+<span class="material-symbols-outlined text-[10px] opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+<a class="px-3 py-2 rounded-md hover:bg-white/5 text-slate-400 hover:text-white text-sm transition-colors flex justify-between items-center group/item" href="#">
+<span>Portugal</span>
+<span class="material-symbols-outlined text-[10px] opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</div>
+</details>
+<!-- About -->
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">person</span>
+<p class="text-slate-300 text-sm font-medium tracking-wide group-hover:text-white transition-colors">About</p>
+</a>
+<!-- Contact -->
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">mail</span>
+<p class="text-slate-300 text-sm font-medium tracking-wide group-hover:text-white transition-colors">Contact</p>
+</a>
+</div>
+</div>
+<!-- Bottom Section: CTA & Socials -->
+<div class="p-8 border-t border-white/5 bg-[#121118]">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-12 bg-primary hover:bg-primary/90 text-white text-sm font-bold tracking-wide transition-all shadow-lg shadow-primary/25 mb-8 group">
+<span>Book a Shoot</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+<div class="flex justify-between items-center px-2">
+<a class="text-slate-500 hover:text-white transition-colors" href="#" title="Instagram">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="text-slate-500 hover:text-white transition-colors" href="#" title="Twitter">
+<span class="material-symbols-outlined">chat_bubble</span>
+</a>
+<a class="text-slate-500 hover:text-white transition-colors" href="#" title="Behance">
+<span class="material-symbols-outlined">palette</span>
+</a>
+<a class="text-slate-500 hover:text-white transition-colors" href="#" title="Store">
+<span class="material-symbols-outlined">shopping_bag</span>
+</a>
+</div>
+<p class="text-center text-slate-600 text-[10px] mt-6 tracking-wider">© 2024 ELENA VANCE</p>
+</div>
+</nav>
+<!-- Main Content Area: Hero -->
+<main class="flex-1 relative h-full w-full bg-black overflow-hidden group">
+<!-- Hero Background Image -->
+<div class="absolute inset-0 bg-cover bg-center animate-fade-in transform scale-105 group-hover:scale-100 transition-transform duration-[10s] ease-out" data-alt="Dramatic landscape of a dark, moody mountain range with moonlit peaks" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuVxOy7oONtIFI5SZu-U1G5Y45do6yODNsAWOUc-O3TRH5ChBFnSguyAwYGESXZmGkkgCYbvaq4nLvcBuykipauODGPWT6Yr89vSWvQoHqCac1ASbSTJx9JvQP6rja_OKDyomTF2A0sF3pGfoO-l1uLeTjTm9UdKF8rUeSR2uTJ72JFm11t-BomahCmXdh5NVekyoyImy25hIIGzxXZVsI4MqZ60UU1-YBvdEZRsdSiEq3sW3YJYIrTFvOqLxqlgoioOFlbhYhFXg");'>
+</div>
+<!-- Gradient Overlays for Readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#141121] via-transparent to-transparent opacity-60"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#141121]/50 via-transparent to-transparent opacity-40"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<!-- Hero Content -->
+<div class="relative h-full flex flex-col justify-end p-10 md:p-20 lg:p-32 pb-24">
+<div class="max-w-4xl opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]">
+<div class="flex items-center gap-4 mb-4">
+<div class="h-[1px] w-12 bg-white/60"></div>
+<span class="text-white/80 uppercase tracking-[0.3em] text-xs font-light">Selected Works 2024</span>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight tracking-tight mb-6 drop-shadow-2xl">
+                        Capturing <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50 italic font-light">The Unseen</span>
+</h1>
+<p class="text-lg text-slate-300 max-w-xl font-light leading-relaxed mb-10 text-shadow-sm">
+                        Exploring the boundaries between light and shadow across the landscapes of South America and Europe.
+                    </p>
+<div class="flex gap-4">
+<button class="px-8 py-3 bg-white text-black font-bold text-sm tracking-widest hover:bg-slate-200 transition-colors rounded">
+                            VIEW GALLERIES
+                        </button>
+<button class="px-8 py-3 border border-white/30 text-white font-bold text-sm tracking-widest hover:bg-white/10 transition-colors backdrop-blur-sm rounded">
+                            LATEST JOURNAL
+                        </button>
+</div>
+</div>
+</div>
+<!-- Decorative Floating Element (Optional - location indicator) -->
+<div class="absolute top-8 right-8 flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
+<span class="material-symbols-outlined text-white text-sm">location_on</span>
+<span class="text-xs text-white tracking-widest uppercase font-medium">Andes Mountains</span>
+</div>
+</main>
+</div>
+</body></html>

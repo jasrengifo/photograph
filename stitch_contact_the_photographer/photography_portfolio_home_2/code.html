@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Colombia Landscape Gallery</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&amp;family=Manrope:wght@200..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b19e6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#141121",
+                        "card-dark": "#1e1b2e",
+                    },
+                    fontFamily: {
+                        "display": ["Josefin Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    animation: {
+                        'fade-in': 'fadeIn 2s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .hide-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .hide-scroll::-webkit-scrollbar-track {
+            background: #141121;
+        }
+
+        .hide-scroll::-webkit-scrollbar-thumb {
+            background: #2d2a3d;
+            border-radius: 3px;
+        }
+
+        .hide-scroll::-webkit-scrollbar-thumb:hover {
+            background: #3b19e6;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden selection:bg-primary selection:text-white">
+    <div class="flex h-screen w-full flex-col md:flex-row">
+        <nav
+            class="flex-none w-full md:w-80 h-auto md:h-full bg-[#121118] border-b md:border-b-0 md:border-r border-white/5 flex flex-col justify-between z-20 relative shadow-2xl">
+            <div class="flex flex-col p-8 overflow-y-auto no-scrollbar">
+                <div class="flex flex-col gap-4 mb-10">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-center bg-no-repeat bg-cover rounded-full size-12 ring-2 ring-white/10"
+                            data-alt="Photographer profile portrait showing a silhouette against a sunset"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCiz7Li6GvwDMN1fMjbOxw21K8RyxglPBd4Cd3HnbqLRA1pfI62DT2-jkHCQKzFZUhPJGN-XiArkZPl9SUOwnoDISp21t_59Ym6LLhH-4NfWv4lb0O7weGegh-lwtWwvjzIU7g33YkDF_jOAdvFNMKGorPYDQqs-bRMoxUOo1EeyXn-2-coo86fn3-NuLJxr0q4k_GbKfO1Q3wA4sV-5RL4v9x9cwAOJ23eJqklJFFP5kZt3TSGhSxGWiUJ_6J_E_Hb4HumvZNcnU8");'>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-white text-lg font-bold tracking-wide leading-tight">Ruth G.</h1>
+                            <p class="text-slate-400 text-xs font-medium tracking-widest uppercase mt-1">Visual Artist
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-300 group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">home</span>
+                        <p class="text-slate-300 text-sm font-medium tracking-wide group-hover:text-white">Home</p>
+                    </a>
+                    <details class="group rounded-lg transition-colors duration-300" open="">
+                        <summary
+                            class="flex cursor-pointer items-center justify-between gap-4 px-4 py-3 rounded-lg bg-white/5 transition-colors duration-300 select-none">
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-white">photo_library</span>
+                                <p class="text-white text-sm font-medium tracking-wide">Galleries</p>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-white text-lg transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="flex flex-col pl-12 pr-2 pb-2 gap-1 mt-1 border-l border-white/5 ml-6">
+                            <a class="px-3 py-2 rounded-md hover:bg-white/5 text-slate-400 hover:text-white text-sm transition-colors flex justify-between items-center group/item"
+                                href="#">
+                                <span>Venezuela</span>
+                                <span
+                                    class="material-symbols-outlined text-[10px] opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+                            </a>
+                            <a class="px-3 py-2 rounded-md bg-primary/10 text-white text-sm transition-colors flex justify-between items-center group/item border-l-2 border-primary"
+                                href="#">
+                                <span class="font-bold tracking-wide">Colombia</span>
+                                <span class="material-symbols-outlined text-[10px] text-primary">arrow_forward</span>
+                            </a>
+                            <a class="px-3 py-2 rounded-md hover:bg-white/5 text-slate-400 hover:text-white text-sm transition-colors flex justify-between items-center group/item"
+                                href="#">
+                                <span>Portugal</span>
+                                <span
+                                    class="material-symbols-outlined text-[10px] opacity-0 group-hover/item:opacity-100 transition-opacity">arrow_forward</span>
+                            </a>
+                        </div>
+                    </details>
+                    <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-300 group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">person</span>
+                        <p
+                            class="text-slate-300 text-sm font-medium tracking-wide group-hover:text-white transition-colors">
+                            About</p>
+                    </a>
+                    <a class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-300 group"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-hover:text-white transition-colors">mail</span>
+                        <p
+                            class="text-slate-300 text-sm font-medium tracking-wide group-hover:text-white transition-colors">
+                            Contact</p>
+                    </a>
+                </div>
+            </div>
+            <div class="p-8 border-t border-white/5 bg-[#121118]">
+                <button
+                    class="w-full flex items-center justify-center gap-2 rounded-lg h-12 bg-primary hover:bg-primary/90 text-white text-sm font-bold tracking-wide transition-all shadow-lg shadow-primary/25 mb-8 group">
+                    <span>Book a Shoot</span>
+                    <span
+                        class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                </button>
+                <div class="flex justify-between items-center px-2">
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#" title="Instagram">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#" title="Twitter">
+                        <span class="material-symbols-outlined">chat_bubble</span>
+                    </a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#" title="Behance">
+                        <span class="material-symbols-outlined">palette</span>
+                    </a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#" title="Store">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                    </a>
+                </div>
+                <p class="text-center text-slate-600 text-[10px] mt-6 tracking-wider">© 2024 ELENA VANCE</p>
+            </div>
+        </nav>
+        <main class="flex-1 relative h-full w-full bg-background-dark overflow-y-auto hide-scroll p-6 md:p-12 lg:p-16">
+            <header class="max-w-7xl mx-auto mb-16 animate-slide-up">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-[1px] w-12 bg-primary"></div>
+                    <span class="text-primary uppercase tracking-[0.3em] text-xs font-bold">South America</span>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                    <div>
+                        <h1 class="text-5xl md:text-7xl font-light text-white leading-tight mb-4">
+                            Colombia <span class="italic text-slate-500">Unveiled</span>
+                        </h1>
+                        <p class="text-slate-400 max-w-xl font-light text-lg leading-relaxed">
+                            From the misty peaks of the Andes to the vibrant streets of Cartagena. A visual journey
+                            through color, texture, and light.
+                        </p>
+                    </div>
+                    <div class="flex gap-4 text-sm text-slate-500 font-medium tracking-widest uppercase">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">photo_camera</span>
+                            <span>24 Shots</span>
+                        </div>
+                        <div class="w-[1px] bg-white/10"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">calendar_month</span>
+                            <span>2023 - 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div
+                class="max-w-7xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 animate-[fadeIn_1s_ease-out_0.5s_forwards] opacity-0">
+                <div
+                    class="break-inside-avoid relative group rounded-sm overflow-hidden cursor-pointer shadow-2xl bg-card-dark">
+                    <img alt="Cocora Valley Wax Palms"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out grayscale-[20%] group-hover:grayscale-0"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQelgrO48Hb96JDzXoTV3bMOzWsNLqA3XYQsckW3TbClCVJ5bgZvaNIB37un9T7UvaBAz4buiAnWdILOwlTLY1RN_UjzoZ2Wn_YVPkh34bhOlDYpn_xdUDfSIjK_k8zX6dYn5oLpCEwtuI11dpPhw8Zolpt63f0irE2FKiVFgi2WbRPbL4CjZDKudDNAX4xIzfna7SamdKh9wCK1qg7c8Oyw0wl-xAa6MuiUVzHKP49Tj8Rdr302_9vSqETS1dWmi9kJgrQZ3qG8A" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0">
+                        <div
+                            class="flex items-center gap-2 mb-2 text-primary text-[10px] uppercase tracking-widest font-bold">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            <span>Quindío • Valle de Cocora</span>
+                        </div>
+                        <h3 class="text-white text-2xl font-light mb-2">Giants of the Mist</h3>
+                        <p
+                            class="text-slate-300 text-sm font-light leading-relaxed line-clamp-2 border-l border-primary/50 pl-3">
+                            The majestic wax palms standing guard in the cloud forest, piercing through the morning fog.
+                        </p>
+                        <span class="text-slate-500 text-[10px] mt-4 font-mono">MAR 14, 2024</span>
+                    </div>
+                </div>
+                <div
+                    class="break-inside-avoid relative group rounded-sm overflow-hidden cursor-pointer shadow-2xl bg-card-dark">
+                    <img alt="Cartagena Streets"
+                        class="w-full h-[500px] object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out grayscale-[20%] group-hover:grayscale-0"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqXPPvpXOeE1G4pxZ2krIWwpqPGzaAFsnF0wP7kPanbGKSo0Vx_nLFJoStf8US7CIO-LvZd57apvsak1cMa5hEpgPrlIlOIAYhFSbp_6MOYng0rcZLy_QmR5i7MQ7xTM98PG52Np2nbOTcQ7cE5cXng1SpW7bzq48JAU0EOMm7vg6CL3ABxpY_6UnFOKNKy0-H3grEuBZdLA90PjCPJAe3lyNB7wYg_zqLECb_McS_WpiU9i58GKYRNReHwgfcoE_lxatO-jZjxTk" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0">
+                        <div
+                            class="flex items-center gap-2 mb-2 text-primary text-[10px] uppercase tracking-widest font-bold">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            <span>Cartagena • Old Town</span>
+                        </div>
+                        <h3 class="text-white text-2xl font-light mb-2">Colonial Rhythm</h3>
+                        <p
+                            class="text-slate-300 text-sm font-light leading-relaxed line-clamp-2 border-l border-primary/50 pl-3">
+                            Vibrant facades and bougainvillea cascading from wooden balconies in the walled city.
+                        </p>
+                        <span class="text-slate-500 text-[10px] mt-4 font-mono">FEB 22, 2024</span>
+                    </div>
+                </div>
+                <div
+                    class="break-inside-avoid relative group rounded-sm overflow-hidden cursor-pointer shadow-2xl bg-card-dark">
+                    <img alt="Guatape Rock"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out grayscale-[20%] group-hover:grayscale-0"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmCE5UqwcW-9JpHcpWyQ8Of-cUEWmQPNPZnMcxiEddXG6FdZT--Q9OqeGYM6m7FqgHHFwryBmpkIwwmAvn5JYvnBl1bdUbZTCMIzzZJHfINId_ZNMcEwCU7Qi9oxBDmXSdFXw6yw8ZivNTMgmfcwRHIFgLtBA4DIzuYspTUksWvS-8D637TR0Slbs_8n_RG-ZG4JRRjdbxawnXdl-0BotBmjkeblCL0ImsRiJCKdYN-d3PvQBGTR_ilqs31ZX3poVLnP7tmDFuiOg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0">
+                        <div
+                            class="flex items-center gap-2 mb-2 text-primary text-[10px] uppercase tracking-widest font-bold">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            <span>Antioquia • Guatapé</span>
+                        </div>
+                        <h3 class="text-white text-2xl font-light mb-2">The Stone View</h3>
+                        <p
+                            class="text-slate-300 text-sm font-light leading-relaxed line-clamp-2 border-l border-primary/50 pl-3">
+                            Looking down from El Peñol at the labyrinth of lakes and islands.
+                        </p>
+                        <span class="text-slate-500 text-[10px] mt-4 font-mono">APR 05, 2024</span>
+                    </div>
+                </div>
+                <div
+                    class="break-inside-avoid relative group rounded-sm overflow-hidden cursor-pointer shadow-2xl bg-card-dark">
+                    <img alt="Medellin Metro"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out grayscale-[20%] group-hover:grayscale-0"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi14eMoceQ7-6Q9VqLNmLMbgr5G_AoXZBZi-DYx2f9h4RBGiZ6qdFntaHz_AgmhQnrbBuaW_WxQ-zgM1SoOrNySDQk9tfurmlDLPhh7_K6a8HpPSyhsQtAD62acJjKfbnehf3XKFYYxkVFd8p6RrjVofQsQarido_moybSzNfbbTq0E-vlicmcCLLez0lRvVP7O9Ss-_ndprhlDGtVtiIJYfdoJ2Xgc4h1jLHZkKWAnTSFZKi8MNPhD4F4pGtM2gwZDI8KG_kDgCo" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0">
+                        <div
+                            class="flex items-center gap-2 mb-2 text-primary text-[10px] uppercase tracking-widest font-bold">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            <span>Medellín • Comuna 13</span>
+                        </div>
+                        <h3 class="text-white text-2xl font-light mb-2">Urban Renaissance</h3>
+                        <p
+                            class="text-slate-300 text-sm font-light leading-relaxed line-clamp-2 border-l border-primary/50 pl-3">
+                            Graffiti art and electric stairs symbolizing the transformation of the city.
+                        </p>
+                        <span class="text-slate-500 text-[10px] mt-4 font-mono">JAN 10, 2024</span>
+                    </div>
+                </div>
+                <div
+                    class="break-inside-avoid relative group rounded-sm overflow-hidden cursor-pointer shadow-2xl bg-card-dark">
+                    <img alt="Tayrona Park"
+                        class="w-full h-[600px] object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out grayscale-[20%] group-hover:grayscale-0"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsLKtLrpOsVgCtklzoUMUOL8UB7UBrfh-JCzZc3gtCMAZkf9SoDIChkgvoI8fkCZjbo5M1pOFNOLRd9jj4pRzdpEY5fzwhuj5RyNjQqqGJ9uKeIyxSbKd-uEszNxOyeaQEwxLJbbHg9JzpPe_ySp6OS5iMiFi146Xt0PFsIsdW5542xpLwzXxd-2lAtb89feflGhGnAQ296O0AQMlelGhgQvLqNsIPMm4ptBbA5WcjwgKZiRKIHG4r2pEW7y1Rpe94045T3yK7RxY" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0">
+                        <div
+                            class="flex items-center gap-2 mb-2 text-primary text-[10px] uppercase tracking-widest font-bold">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            <span>Magdalena • Tayrona</span>
+                        </div>
+                        <h3 class="text-white text-2xl font-light mb-2">Jungle Meets Sea</h3>
+                        <p
+                            class="text-slate-300 text-sm font-light leading-relaxed line-clamp-2 border-l border-primary/50 pl-3">
+                            Where the dense rainforest spills onto wild, boulder-strewn beaches.
+                        </p>
+                        <span class="text-slate-500 text-[10px] mt-4 font-mono">DEC 12, 2023</span>
+                    </div>
+                </div>
+                <div
+                    class="break-inside-avoid relative group rounded-sm overflow-hidden cursor-pointer shadow-2xl bg-card-dark">
+                    <img alt="Bogota Monserrate"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out grayscale-[20%] group-hover:grayscale-0"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvkwC4IJWMY95DIbNAFTgDICuz2mwJCprg9ZoDnAlWgwczMnKshlupvqINMb2rQNvN1koVqYMNCrfTrIXZKRxmlEBu7SDJeXbM6S1PT5St4ROGkhc4472RS-3O7b8gmDLgT9DVHnYlfsrGse8CQqg-2HqoOxuaWKi-0LWrgqHNe5umIYD1FhRWEMPH3j0It2F6wiRg0CzBZ24NmCZPHgw2ljKSQB2Xb2qoTlINi7IO1puVggfAqIOVafrVS9JxNxnNJo_Is4um4hA" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0">
+                        <div
+                            class="flex items-center gap-2 mb-2 text-primary text-[10px] uppercase tracking-widest font-bold">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            <span>Bogotá • Monserrate</span>
+                        </div>
+                        <h3 class="text-white text-2xl font-light mb-2">Capital Sunset</h3>
+                        <p
+                            class="text-slate-300 text-sm font-light leading-relaxed line-clamp-2 border-l border-primary/50 pl-3">
+                            The sprawling metropolis glowing amber beneath the mountain sanctuary.
+                        </p>
+                        <span class="text-slate-500 text-[10px] mt-4 font-mono">NOV 30, 2023</span>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto mt-16 pb-12 flex justify-center">
+                <button
+                    class="px-8 py-3 bg-white/5 border border-white/10 hover:bg-white/10 text-white text-xs font-bold tracking-[0.2em] uppercase rounded transition-all duration-300 flex items-center gap-3 group">
+                    <span>Load More</span>
+                    <span
+                        class="material-symbols-outlined text-sm group-hover:translate-y-1 transition-transform">expand_more</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Photographer Portfolio</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Manrope (Theme) & Josefin Sans (Requested) -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Josefin+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b19e6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#141121",
+                        "dark-surface": "#1e1c26",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "elegant": ["Josefin Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom overrides for specific font requests */
+        .font-josefin {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-gray-900 dark:text-white font-display overflow-x-hidden">
+<div class="flex flex-col md:flex-row min-h-screen w-full">
+<!-- Side Navigation (Fixed on Desktop, Top on Mobile) -->
+<nav class="w-full md:w-64 flex-shrink-0 bg-background-light dark:bg-[#121118] border-r border-gray-200 dark:border-gray-800 flex flex-col justify-between p-6 z-20">
+<div class="flex flex-col gap-8">
+<!-- Logo / Branding -->
+<div class="flex flex-col">
+<h1 class="font-josefin text-2xl font-bold tracking-widest text-gray-900 dark:text-white uppercase">PORTFOLIO</h1>
+<p class="font-josefin text-gray-500 dark:text-[#a29db8] text-sm font-light tracking-wide">Fine Art Photography</p>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col gap-2">
+<a class="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-[#2b2938] transition-colors duration-200" href="#">
+<span class="font-josefin text-gray-700 dark:text-gray-300 text-sm font-medium uppercase tracking-wider group-hover:text-primary dark:group-hover:text-white">Venezuela</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-[#2b2938] transition-colors duration-200" href="#">
+<span class="font-josefin text-gray-700 dark:text-gray-300 text-sm font-medium uppercase tracking-wider group-hover:text-primary dark:group-hover:text-white">Colombia</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-[#2b2938] transition-colors duration-200" href="#">
+<span class="font-josefin text-gray-700 dark:text-gray-300 text-sm font-medium uppercase tracking-wider group-hover:text-primary dark:group-hover:text-white">Portugal</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-[#2b2938] transition-colors duration-200" href="#">
+<span class="font-josefin text-gray-700 dark:text-gray-300 text-sm font-medium uppercase tracking-wider group-hover:text-primary dark:group-hover:text-white">About</span>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-[#2b2938]" href="#">
+<span class="font-josefin text-primary dark:text-white text-sm font-bold uppercase tracking-wider">Contact</span>
+</a>
+</div>
+</div>
+<!-- Social Links -->
+<div class="flex flex-col gap-1 mt-8 md:mt-0">
+<a class="flex items-center gap-3 px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+<span class="font-josefin text-sm font-medium">Instagram</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">flutter_dash</span>
+<span class="font-josefin text-sm font-medium">Twitter</span>
+</a>
+<p class="px-3 pt-4 text-xs text-gray-400 dark:text-gray-600 font-josefin">© 2023 Photography</p>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 relative flex flex-col lg:flex-row overflow-y-auto">
+<!-- Content Left: Form Section -->
+<div class="flex-1 flex flex-col justify-center items-center p-8 lg:p-16 xl:p-24 relative z-10">
+<div class="w-full max-w-lg flex flex-col gap-10">
+<!-- Header -->
+<div class="flex flex-col gap-2">
+<h2 class="font-josefin text-4xl md:text-5xl font-light text-gray-900 dark:text-white leading-tight">
+                            Let's create something <br/><span class="font-bold text-primary italic">beautiful</span> together.
+                        </h2>
+<p class="font-josefin text-gray-500 dark:text-[#a29db8] text-lg font-light mt-2">
+                            Available for freelance projects and collaborations worldwide.
+                        </p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-6">
+<!-- Name Input -->
+<div class="flex flex-col gap-2">
+<label class="font-josefin text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold" for="name">Your Name</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-primary focus:ring-0 px-0 py-3 text-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 font-josefin transition-colors duration-300" id="name" placeholder="Jane Doe" type="text"/>
+</div>
+<!-- Email Input -->
+<div class="flex flex-col gap-2">
+<label class="font-josefin text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-primary focus:ring-0 px-0 py-3 text-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 font-josefin transition-colors duration-300" id="email" placeholder="jane@example.com" type="email"/>
+</div>
+<!-- Message Input -->
+<div class="flex flex-col gap-2">
+<label class="font-josefin text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold" for="message">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b-2 border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-primary focus:ring-0 px-0 py-3 text-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 font-josefin resize-none transition-colors duration-300" id="message" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="mt-4 self-start bg-gray-900 dark:bg-white text-white dark:text-background-dark hover:bg-primary dark:hover:bg-primary dark:hover:text-white transition-all duration-300 px-8 py-3 rounded-full font-josefin font-bold uppercase tracking-widest text-sm shadow-lg hover:shadow-xl hover:scale-105 transform" type="button">
+                            Send Message
+                        </button>
+</form>
+<!-- Contact Direct -->
+<div class="flex flex-col sm:flex-row gap-8 pt-6 border-t border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-400">mail</span>
+<a class="font-josefin text-gray-600 dark:text-gray-300 hover:text-primary transition-colors" href="mailto:hello@portfolio.com">hello@portfolio.com</a>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-400">location_on</span>
+<span class="font-josefin text-gray-600 dark:text-gray-300">Lisbon, Portugal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Right: Image Section -->
+<div class="hidden lg:flex w-1/3 xl:w-5/12 bg-gray-100 dark:bg-[#0c0b10] relative justify-center items-center p-6">
+<!-- Decorative abstract sunrise photo card -->
+<div class="relative w-full h-[80%] rounded-2xl overflow-hidden shadow-2xl group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Artistic sunrise over a misty landscape with soft orange and purple hues" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhC221pg__6dpJZx3JvJsSP7fvayUl_9kCkVe8_3kT-4YQsetlf4tvYz7qB17cVvTuzIQKl8M12c7PIBBLxF99xxocdwlc4-GL7y2E37oyvt-Jw1zTugz19S-Lyejnsc6Hpsfjrf3t4T_FsnzJDwtsDJi5CmrYdepij1LIyaJlrsxxiBb-dbZqYlr628PZ_ycqK5ryc0HjfkWm7hf7o_z1qXorOHrWsCqCTPJ6zR3UjOqQj4yRj7rgAXtC0VI5x1xYA73EUI5DHPE');">
+</div>
+<!-- Overlay gradient for text readability if needed, or just aesthetic -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<p class="font-josefin text-sm uppercase tracking-[0.2em] mb-1 opacity-80">Current Mood</p>
+<h3 class="font-josefin text-3xl font-light">Morning Haze</h3>
+</div>
+</div>
+</div>
+<!-- Mobile Image (Shown only on small screens below form) -->
+<div class="lg:hidden w-full h-64 relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Artistic sunrise over a misty landscape with soft orange and purple hues" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB93-6NoW6IGcMZLogQENagGd5E-2qouqgJVhuJC9Hx8cbTb7IM8IMlxR2KQ-sXhpDGFg1dGmF0DmmxNZTbNgQZdL8MC5mLQT221NyUSSwUJ8acxc5TUcTCjV2f1qbJTQmcD1AjWEYGDiBE2Eln2L5TGBFPuvxZiObS87x0jMKEbbwWz1JEBQq7ar5LA4RAsOgDFvZqX7eouur63Hf_8NbCHx7WAf_Dy5yZlqXod3o75Tg0-VYXni6eAuQzPiIXmvPQB5cbHEchD1U');">
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venezuela Landscape Gallery</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&amp;family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b19e6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#141121",
+                        "sidebar-dark": "#121118", 
+                        "card-overlay": "rgba(20, 17, 33, 0.85)"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "heading": ["Josefin Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #141121; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2b2938; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b19e6; 
+        }
+        
+        .masonry-grid {
+            column-gap: 1.5rem; 
+        }
+        @media (min-width: 640px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased flex h-screen overflow-hidden selection:bg-primary selection:text-white">
+<!-- Sidebar Navigation -->
+<aside class="w-64 hidden md:flex flex-col h-full bg-sidebar-dark border-r border-white/5 flex-shrink-0 z-20">
+<div class="p-8 pb-4">
+<h1 class="text-white text-xl font-heading font-bold tracking-widest leading-normal">LENS &amp; LAND</h1>
+<p class="text-[#a29db8] text-xs font-normal uppercase tracking-wider mt-1">Photography Portfolio</p>
+</div>
+<nav class="flex-1 px-4 py-4 flex flex-col gap-2 overflow-y-auto">
+<!-- Active Item -->
+<a class="group flex items-center justify-between gap-3 px-4 py-3 rounded-lg bg-primary/10 border-l-2 border-primary transition-all duration-200" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">landscape</span>
+<span class="text-white text-sm font-medium leading-normal group-hover:text-primary transition-colors">Venezuela</span>
+</div>
+</a>
+<!-- Inactive Items -->
+<a class="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-200 text-[#a29db8] hover:text-white" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+<span class="text-sm font-medium leading-normal">Colombia</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-200 text-[#a29db8] hover:text-white" href="#">
+<span class="material-symbols-outlined text-[20px]">church</span>
+<span class="text-sm font-medium leading-normal">Portugal</span>
+</a>
+<div class="my-4 h-px w-full bg-white/5"></div>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-200 text-[#a29db8] hover:text-white" href="#">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span class="text-sm font-medium leading-normal">About</span>
+</a>
+<a class="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-all duration-200 text-[#a29db8] hover:text-white" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span class="text-sm font-medium leading-normal">Contact</span>
+</a>
+</nav>
+<div class="p-6 border-t border-white/5">
+<div class="flex gap-4 justify-center">
+<a class="text-[#a29db8] hover:text-primary transition-colors" href="#"><span class="text-xs">IG</span></a>
+<a class="text-[#a29db8] hover:text-primary transition-colors" href="#"><span class="text-xs">TW</span></a>
+<a class="text-[#a29db8] hover:text-primary transition-colors" href="#"><span class="text-xs">BE</span></a>
+</div>
+<p class="text-[#a29db8]/40 text-[10px] text-center mt-4">© 2024 Lens &amp; Land</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 h-full overflow-y-auto relative scroll-smooth bg-background-light dark:bg-background-dark">
+<!-- Mobile Header (Visible only on small screens) -->
+<div class="md:hidden flex items-center justify-between p-4 bg-sidebar-dark sticky top-0 z-30 border-b border-white/10">
+<span class="text-white font-heading font-bold">LENS &amp; LAND</span>
+<button class="text-white p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div class="max-w-[1400px] mx-auto px-6 py-12 md:px-12 lg:px-16">
+<!-- Page Heading -->
+<header class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm">public</span>
+<span class="text-primary text-xs font-bold uppercase tracking-widest">South America</span>
+</div>
+<h1 class="text-white text-5xl md:text-7xl font-heading font-bold leading-tight tracking-tight">Venezuela</h1>
+<p class="text-[#a29db8] text-lg md:text-xl font-light mt-2 max-w-xl">A visual journey through the Lost World tephuis, Caribbean coasts, and the vibrant life of the Andes.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-background-dark bg-gray-700 overflow-hidden" data-alt="Photographer portrait thumbnail">
+<img alt="Photographer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-DC-SqGc01Cfqu-KT9hLiHicLr4uubRVzbtseZjCCZNWz6MgFXatfvGSmtH9V8tJxW3H3kK-fIT_n3eaa7R7lIldcZJStWuStY1GftIArvWxFxPdiwl2qd3Ofm8LRlQIOfgOya-aa9bGusnFKw3NFyM1MNDpbp8imMbqjXx_8FN433_6ZJ3kDie0HnUfvFhvn8E7_6VzeKQI1hnwfFWMzZRXErG0PcCXGpVcjHAL3IcV_hAU8RJppDvvbYAo6ss5rD39NIbcz_LY"/>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white text-sm font-bold">Curated Selection</p>
+<p class="text-[#a29db8] text-xs">12 Photographs</p>
+</div>
+</div>
+</header>
+<!-- Masonry Grid -->
+<!-- Using CSS Columns for Masonry Effect -->
+<div class="masonry-grid space-y-6 pb-20">
+<!-- Image Card 1: Tall -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Angel Falls cascading down a cliff face" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Angel Falls cascading down a cliff face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHmwnim8CUfJ673jLuZbnrExYieVQ_92t3ETkvYqyVYDpOLAU9SiLw89UdQnqRPW35lf390yc41e5CUJmbOyFZvyoOLwzU_yzraKm7BrBOt2XebVG1DuMTIULiLsZVVkV2j4l9Qbhjngds5O6w7eZA01FU4SvvHIjSR9Yj_PQvFcSzI7rFdN-NrE1LJiOVhbBDzCZOEq-KJLHVFp6Vw7V90nkdu7sSkM9v2kVXVGPbus9dd7n6pExc5VsRDlUvPVqFy6ZOmWpNvKs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Sep 2023</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Angel Falls</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Canaima National Park</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">The world's highest uninterrupted waterfall, dropping over the edge of the Auyán-tepui mountain in the Canaima National Park.</p>
+</div>
+</div>
+<!-- Image Card 2: Wide -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Turquoise waters of Los Roques Archipelago" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Turquoise waters of Los Roques Archipelago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPkRRChWCjOVbh7LTLCDRkPqSY30unz6enwVMFd4HBZi5zHD0CgRS54JF0EwCUYgu7z56WbAQuABwIWNdij4ZNgogG8_LsV03IBzPWS67ZEsm2amSoCZ_2bj5Tz_musKB37Lwj6rj_CxceoAhEMtO1jjpLk34K2WEyoJzTW9-X9mMSEWiO9wTyDsLLC_Ub-BfEYIrekVYHBfPCCO2pKo88u1M45OBeFVxeV1AAF-kmpxW0HLp5Thffj7ir_YNPrc6Oy5nVvngObvs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Jan 2024</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Los Roques</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Caribbean Sea</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">Crystal clear waters and white sandy beaches of the archipelago.</p>
+</div>
+</div>
+<!-- Image Card 3: Square-ish -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Top of Mount Roraima above clouds" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Top of Mount Roraima above clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUshGu0OaWNWECGCJu7Kqylu7e6-d7sGTdGOcNDQju_-_pA0yJJ3gWmZLapS6M7oE_VAq0qK3tPgdsxNGzT1Wb5pEDa0esqOiszpGzWW4qMie2-V9EPN61GtFXHbSa3h7iOKiEHJO0MT_7-ss6XMnhv8rUSZDia5zWnXdSIMa9BtBXhI7Zg1GNWS2-V9dAv8tCxAnUOy8xSwcaf5ZU8hp_lTafHJlrBQdO5hDhKviOkZX09TaUInocQu_Iwi2QvBx_nInvraqqYdg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Dec 2023</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Mount Roraima</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>La Gran Sabana</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">A prehistoric landscape above the clouds, inspiring the 'Lost World'.</p>
+</div>
+</div>
+<!-- Image Card 4: Tall -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Dense jungle foliage and river" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Dense jungle foliage and river" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_ig2pMY10nJGk8omYvx_KZ585MI4EFlrY8rfOIFa3KJ7Im5BhMC99TGLWtgoUzpC35bhLS0k4TQeBn1BGG2ol-RRhe5bE3GnF1D_IMElZGO121qSdAE3DoLWoLGqwL_CgBQ0u_6TTZqfLN4cAtogvJa5F_37gJutAMhICBXOcjVkK7gcw-XRqcPjdOFo05eqaN61E4ropV0BP72AR6PjjpcuazIQX5KDpVo7oxiSdV8t_Msq5Yz0JKcO7ljuj6MNuJmbmcRw4Jkk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Feb 2024</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Orinoco Delta</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Delta Amacuro</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">Exploring the intricate waterways of the mighty Orinoco river.</p>
+</div>
+</div>
+<!-- Image Card 5: Wide -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Sand dunes of Medanos de Coro" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Sand dunes of Medanos de Coro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl8B_mdGEx03OBkPDrleBYPsVCaxvOp4cRY0lBjeu_Yd9CcvIgeje3kgQY-y2I4-cs22IOAm2Cb-C3dNwWLIsbuUdiwnX9YGsLSq9JflHt2rnb0ZB37oiQTvL4AMy6iv6fw-FEq7PpR4Vmy2ai18MbaeIGIvtPZmAQLvwV5rbViDyyD1gSvmPosb6xKRN6tbaq_LpSkXCEO0XDIcc4rqJic_j2W6kjGjdPeTMenhN5p76qkCWuAk5NGCaNzn6xK0QDUl-8drHwBC8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Mar 2023</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Medanos de Coro</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Falcón State</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">Massive sand dunes constantly shifting with the trade winds.</p>
+</div>
+</div>
+<!-- Image Card 6: Tall -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Snowy peaks of the Andes mountains" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Snowy peaks of the Andes mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB78gs8bS06Em0j9Aj8y1c013_nGijSB_7sJ89x6plc_gqZNll6uJCAm4RPCqTH1VCvViWgxDL8HjRVci4FrN4gveYUmqZEZaynnY9D7fcvl1ZC7luo0iuP8qf7q-1NWQZA32XKICaYymeBQnJWlIwtHxWcmqHz-3jhU8-wMG0qLV0to1JxBqMte5t00fbUm6_W6JLqHXP2PbnL7LBTiOjmqH00KVDF0LM9H9iT6j_78gVSeiWmU26wYKJOdwO2qEEe0pNuUID4bD8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Nov 2023</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Pico Bolívar</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Mérida</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">The highest mountain in Venezuela, offering breathtaking views of the Andes.</p>
+</div>
+</div>
+<!-- Image Card 7: Tall -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Lightning storm over lake" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Lightning storm over lake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqPUo3O0zWt5JyF8bbzUgeJS-phQAKVn4d9JVEIwkZglHZMM-7E-B8zBGMc1b33hNBbtN5VSWnqOyf9Z6pTyjQ1Hudi8st7cfMmJd4ttbLfM3DTNWJQVeL0uquouVKvSdsrBD3N0MVz8TLk6wj-Voerm_-WCY59MMz3bH4CVlYYLdHK2AlzKhN7Ha8w2bdi4I9Wbcey0p7_Myt_PxY1xUIVXJ4eh5LcUOnWgKA-Z9nxMOYXo9ugUjgn5PB197gRh0pwuH5h9XDJh4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Aug 2023</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Catatumbo</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Lake Maracaibo</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">The everlasting storm, a unique atmospheric phenomenon.</p>
+</div>
+</div>
+<!-- Image Card 8: Wide -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Colonial architecture in Coro" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Colonial architecture in Coro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbN2zVhxg_eNxbrCv9wO-ud2XbULNPaxjeOM34j5W_jmGGsbDqXAevbT8FyeQV3k7ogqQCSI1gCoBI867puj5kWkU6_Q7McD0RHy-AY6bXv1HTHoF22pImB9vwNnjqAkpaKQ1IrZ5_xg4rD6gN2MllTnK27p7snUCMYsjF7gqlA4j13nYX1Xs7pevbBbYXp15yR6WJ84gHILthT_2IIq0yNUHWbq_jInH2pcK9StHoUn2olz9Dpy8Ig19EAIMZX6IZcCiXPg7guLk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Jul 2023</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Coro Colonial</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Santa Ana de Coro</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">Cobblestone streets and colorful colonial houses.</p>
+</div>
+</div>
+<!-- Image Card 9: Square -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer bg-gray-900 shadow-2xl">
+<img alt="Dense jungle and cocoa plants" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Dense jungle and cocoa plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvs_THkPpcmupxChYyIOrHR1lHMLVkDlG5Cb26lXC1OuMd_jxb8auxZpOh1GjwikCmfGRDBJY3nHM8WV8XXD1v7iKtBkTku--TKiaSwkW8WJ3_Ooq4KHgfdixbE5UWVm84T33UMyMJo-lU0S7PVOw-pYX52EzY7T3faToLZ0vYwaBa2aQW_wEaYW42IXm_0vzNrdiY1mHMJsAUVYMiSk7-H-yKJNP5o6jcBl6XpAfg_sr1VktLAMzQHyKA8CB-WUMD_OMqJ4B6Hz4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">May 2023</span>
+<h3 class="text-white font-heading text-2xl font-semibold mb-1">Chuao</h3>
+<div class="flex items-center gap-1 text-gray-300 text-sm mb-3">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Aragua</span>
+</div>
+<p class="text-gray-400 text-sm font-light line-clamp-2">Famous for producing some of the finest cocoa beans in the world.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
