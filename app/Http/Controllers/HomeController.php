@@ -23,7 +23,7 @@ class HomeController extends Controller
 
     public function galleries()
     {
-        $countries = \App\Models\Country::where('active', true)->has('photos')->get();
+        $countries = \App\Models\Country::where('active', true)->get();
         return view('galleries', compact('countries'));
     }
 

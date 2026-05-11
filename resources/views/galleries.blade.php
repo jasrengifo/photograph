@@ -24,6 +24,10 @@
                     <img src="{{ Storage::url($coverPhoto->image_path) }}" 
                          alt="{{ $country->name }}" 
                          class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110">
+                @else
+                    <div class="absolute inset-0 h-full w-full bg-slate-800 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-slate-700 text-6xl">image_not_supported</span>
+                    </div>
                 @endif
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                 <div class="absolute bottom-0 left-0 p-8 w-full">
