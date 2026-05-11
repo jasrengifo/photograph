@@ -31,7 +31,7 @@
                 </a>
             </div>
 
-            <div class="w-full sm:max-w-md mt-2 px-8 pt-10 pb-14 bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden sm:rounded-2xl z-10">
+            <div class="w-full sm:max-w-md mt-2 px-8 bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden sm:rounded-2xl z-10" style="padding: 30px 20px;">
                 {{ $slot }}
             </div>
         </div>
