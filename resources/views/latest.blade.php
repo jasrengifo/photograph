@@ -14,7 +14,7 @@
         </div>
     </header>
 
-    <div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6 animate-slide-up">
+    <div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
         @forelse($photos as $photo)
             <div class="break-inside-avoid">
                 <x-photo-card :photo="$photo" :index="$loop->index" />
