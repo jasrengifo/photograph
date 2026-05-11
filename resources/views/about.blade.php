@@ -30,11 +30,11 @@
             <!-- Stats/Details -->
             <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8 mt-4">
                 <div class="flex flex-col gap-1">
-                    <span class="text-3xl font-bold text-white">56</span>
+                    <span class="text-3xl font-bold text-white">{{ \App\Models\Photo::count() }}</span>
                     <span class="text-xs uppercase tracking-widest text-gray-500">INSTANTES<br>CAPTURADOS</span>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <span class="text-3xl font-bold text-white">12</span>
+                    <span class="text-3xl font-bold text-white">{{ \App\Models\Photo::whereNotNull('location')->distinct('location')->count('location') }}</span>
                     <span class="text-xs uppercase tracking-widest text-gray-500">CIUDADES<br>FOTOGRAFIADAS</span>
                 </div>
             </div>
