@@ -23,5 +23,13 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('password'),
             ]
         );
+
+        \App\Models\User::updateOrCreate(
+            ['email' => 'ruth@privie.pt'],
+            [
+                'name' => 'Ruth G',
+                'password' => bcrypt('Caracas#2026'),
+            ]
+        );
     }
 }
