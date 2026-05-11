@@ -34,7 +34,7 @@
                     <span class="text-xs uppercase tracking-widest text-gray-500">INSTANTES<br>CAPTURADOS</span>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <span class="text-3xl font-bold text-white">{{ \App\Models\Photo::whereNotNull('location')->distinct('location')->count('location') }}</span>
+                    <span class="text-3xl font-bold text-white">{{ \App\Models\Photo::whereNotNull('city')->distinct('city')->count('city') }}</span>
                     <span class="text-xs uppercase tracking-widest text-gray-500">CIUDADES<br>FOTOGRAFIADAS</span>
                 </div>
             </div>
