@@ -15,7 +15,7 @@
     </header>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        @forelse($countries as $country)
+        @forelse(\App\Models\Country::where('active', true)->has('photos')->get() as $country)
             <a href="{{ route('gallery', $country->code ?? $country->id) }}" class="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-900 shadow-2xl">
                 @php
                     $coverPhoto = $country->photos()->latest()->first();
