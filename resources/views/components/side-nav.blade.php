@@ -1,5 +1,5 @@
 <nav x-data="{ mobileMenuOpen: false }"
-    class="flex-none w-full md:w-80 h-auto md:h-full bg-[#121118] border-b md:border-b-0 md:border-r border-white/5 flex flex-col justify-between z-50 relative shadow-2xl">
+    class="flex-none w-full md:w-80 h-auto md:h-screen bg-[#121118] border-b md:border-b-0 md:border-r border-white/5 flex flex-col justify-between z-50 relative shadow-2xl">
     
     <!-- Mobile Header Bar -->
     <div class="md:hidden flex items-center justify-between px-6 py-4 bg-[#121118] border-b border-white/5 relative z-50">
@@ -15,8 +15,8 @@
         </button>
     </div>
 
-    <!-- Sidebar Content (Hidden on mobile by default) -->
-    <div :class="mobileMenuOpen ? 'flex' : 'hidden md:flex'" class="flex-col h-full justify-between overflow-hidden">
+    <!-- Sidebar Content -->
+    <div :class="mobileMenuOpen ? 'flex' : 'hidden md:flex'" class="flex-col h-full justify-between">
         <div class="flex flex-col p-8 overflow-y-auto no-scrollbar">
             <!-- Logo Section (Desktop only) -->
             <div class="hidden md:flex flex-col gap-4 mb-10">
