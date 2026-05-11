@@ -7,7 +7,7 @@
                     style="background-image: url('{{ Storage::url('photos/ruthg.jpg') }}');">
                 </div>
                 <div class="flex flex-col">
-                    <h1 class="text-white text-lg font-bold tracking-wide leading-tight">Ruth G.</h1>
+                    <h1 class="text-white text-lg font-bold tracking-wide leading-tight">SouLens</h1>
                     <p class="text-slate-400 text-xs font-medium tracking-widest uppercase mt-1">Visual Artist</p>
                 </div>
             </div>
@@ -74,6 +74,6 @@
             </a>
             <!-- More icons... -->
         </div>
-        <p class="text-center text-slate-600 text-[10px] mt-6 tracking-wider">© 2024 RUTH G.</p>
+        <p class="text-center text-slate-600 text-[10px] mt-6 tracking-wider">© {{ date('Y') }} SOULENS</p>
     </div>
 </nav>

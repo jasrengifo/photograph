@@ -9,7 +9,7 @@
                     <span>The Artist</span>
                 </div>
                 <h2 class="font-display text-4xl md:text-5xl font-light text-white leading-tight">
-                    Ruth G. <br /><span class="font-bold text-gray-400 italic">Visual Storyteller</span>
+                    SouLens <br /><span class="font-bold text-gray-400 italic">Visual Storyteller</span>
                 </h2>
             </div>
 

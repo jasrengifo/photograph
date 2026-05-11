@@ -85,7 +85,7 @@
                             <div>
                                 <x-input-label for="author" value="Author" />
                                 <x-text-input id="author" name="author" type="text" class="mt-1 block w-full"
-                                    :value="old('author', $photo->author ?? 'Ruth G.')" required />
+                                    :value="old('author', $photo->author ?? 'SouLens')" required />
                             </div>
 
                             <div class="flex items-center">
