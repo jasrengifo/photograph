@@ -40,16 +40,14 @@
 
             <!-- Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 mt-8">
-                <!-- Trigger Gallery (CSS-only hack or JS) -->
-                <button
-                    onclick="document.querySelector('details').setAttribute('open', 'true'); document.querySelector('nav').scrollTo({top: 0, behavior: 'smooth'});"
+                <a href="{{ route('galleries') }}"
                     class="px-8 py-3 bg-white text-black text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase rounded-sm hover:bg-slate-200 transition-colors">
                     Ver Galerías
-                </button>
-                <button
+                </a>
+                <a href="{{ route('latest') }}"
                     class="px-8 py-3 border border-white/20 text-white text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase rounded-sm hover:bg-white/10 transition-colors">
                     Últimos posts
-                </button>
+                </a>
             </div>
         </div>
 

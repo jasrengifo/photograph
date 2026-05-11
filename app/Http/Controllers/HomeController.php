@@ -21,4 +21,15 @@ class HomeController extends Controller
         return view('gallery', compact('country', 'photos'));
     }
 
+    public function galleries()
+    {
+        $countries = \App\Models\Country::where('active', true)->has('photos')->get();
+        return view('galleries', compact('countries'));
+    }
+
+    public function latest()
+    {
+        $photos = \App\Models\Photo::with(['country', 'album'])->latest()->paginate(12);
+        return view('latest', compact('photos'));
+    }
 }

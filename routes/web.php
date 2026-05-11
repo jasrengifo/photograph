@@ -19,6 +19,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
 Route::get('/gallery/{country:code}', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/galleries', [HomeController::class, 'galleries'])->name('galleries');
+Route::get('/latest', [HomeController::class, 'latest'])->name('latest');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
