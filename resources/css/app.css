@@ -41,23 +41,43 @@
 }
 
 .dark .text-gray-800, 
-.dark .text-gray-900 {
+.dark .text-gray-900,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+.dark label,
+.dark p,
+.dark span,
+.dark div:not(.bg-indigo-600):not(.bg-blue-600) {
     color: #f3f4f6 !important; /* text-gray-100 */
 }
 
 .dark .border-gray-100, 
-.dark .border-gray-200 {
+.dark .border-gray-200,
+.dark .border-gray-300,
+.dark .border-gray-400 {
     border-color: #374151 !important; /* gray-700 */
 }
 
 .dark input, 
 .dark select, 
 .dark textarea {
-    background-color: #111827 !important;
-    border-color: #374151 !important;
-    color: #f3f4f6 !important;
+    background-color: #1f2937 !important; /* bg-gray-800 */
+    border-color: #4b5563 !important; /* border-gray-600 */
+    color: #ffffff !important;
+}
+
+.dark input::placeholder {
+    color: #9ca3af !important;
 }
 
 .dark .shadow-sm {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Fix for Select2 or similar if used */
+.dark .select2-container--default .select2-selection--single {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #ffffff !important;
 }

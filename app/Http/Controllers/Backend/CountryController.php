@@ -8,9 +8,16 @@ use Illuminate\Http\Request;
 
 class CountryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $countries = Country::latest()->paginate(10);
+        $query = Country::query();
+
+        if ($request->has('search')) {
+            $query->where('name', 'like', '%' . $request->search . '%')
+                  ->orWhere('code', 'like', '%' . $request->search . '%');
+        }
+
+        $countries = $query->latest()->paginate(20);
         return view('admin.countries.index', compact('countries'));
     }
 

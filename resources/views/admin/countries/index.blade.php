@@ -9,7 +9,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <div class="flex justify-end mb-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <form action="{{ route('admin.countries.index') }}" method="GET" class="flex gap-2">
+                            <x-text-input name="search" placeholder="Search countries..." value="{{ request('search') }}" class="w-64" />
+                            <x-primary-button type="submit">Search</x-primary-button>
+                            @if(request('search'))
+                                <a href="{{ route('admin.countries.index') }}" class="px-4 py-2 border border-gray-600 rounded text-gray-300 hover:text-white flex items-center">Clear</a>
+                            @endif
+                        </form>
                         <a href="{{ route('admin.countries.create') }}"
                             class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md">
                             Add New Country

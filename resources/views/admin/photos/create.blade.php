@@ -165,6 +165,24 @@
                 document.getElementById('latitude').value = e.latlng.lat;
                 document.getElementById('longitude').value = e.latlng.lng;
             });
+
+            // TomSelect for Country
+            new TomSelect("#country_id",{
+                create: false,
+                sortField: {
+                    field: "text",
+                    direction: "asc"
+                }
+            });
+
+            // TomSelect for Album
+            new TomSelect("#album_id",{
+                create: false,
+                sortField: {
+                    field: "text",
+                    direction: "asc"
+                }
+            });
         });
     </script>
 </x-app-layout>

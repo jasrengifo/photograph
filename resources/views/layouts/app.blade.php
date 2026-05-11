@@ -13,6 +13,16 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <!-- TomSelect -->
+        <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+        <style>
+            .ts-control { background-color: #374151 !important; color: white !important; border-color: #4b5563 !important; }
+            .ts-dropdown { background-color: #374151 !important; color: white !important; }
+            .ts-dropdown .active { background-color: #4b5563 !important; color: white !important; }
+            .ts-dropdown .option { color: white !important; }
+        </style>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
