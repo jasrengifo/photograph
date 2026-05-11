@@ -62,12 +62,21 @@
 
     <!-- Footer/Socials -->
     <div class="p-8 border-t border-white/5 bg-[#121118]">
-        <button
-            class="w-full flex items-center justify-center gap-2 rounded-lg h-12 bg-primary hover:bg-primary/90 text-white text-sm font-bold tracking-wide transition-all shadow-lg shadow-primary/25 mb-8 group">
-            <span>Book a Shoot</span>
-            <span
-                class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
-        </button>
+        @auth
+            <a href="{{ route('admin.photos.index') }}"
+                class="w-full flex items-center justify-center gap-2 rounded-lg h-12 bg-primary hover:bg-primary/90 text-white text-sm font-bold tracking-wide transition-all shadow-lg shadow-primary/25 mb-8 group">
+                <span>Dashboard</span>
+                <span
+                    class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">dashboard</span>
+            </a>
+        @else
+            <a href="{{ route('login') }}"
+                class="w-full flex items-center justify-center gap-2 rounded-lg h-12 bg-primary hover:bg-primary/90 text-white text-sm font-bold tracking-wide transition-all shadow-lg shadow-primary/25 mb-8 group">
+                <span>Login</span>
+                <span
+                    class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">login</span>
+            </a>
+        @endauth
         <div class="flex justify-between items-center px-2">
             <a href="#" title="Instagram" class="text-slate-500 hover:text-white transition-colors">
                 <span class="material-symbols-outlined">photo_camera</span>
