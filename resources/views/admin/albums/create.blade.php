@@ -28,8 +28,8 @@
                         <!-- Description -->
                         <div class="mb-4">
                             <x-input-label for="description" value="Description" />
-                            <textarea id="description" name="description" rows="3"
-                                class="mt-1 block w-full rounded-md shadow-sm">{{ old('description', $album->description ?? '') }}</textarea>
+                            <x-textarea id="description" name="description" rows="3"
+                                class="mt-1 block w-full">{{ old('description', $album->description ?? '') }}</x-textarea>
                             <x-input-error class="mt-2" :messages="$errors->get('description')" />
                         </div>
 

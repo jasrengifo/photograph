@@ -54,8 +54,8 @@
                         </div>
                         <div>
                             <x-input-label for="home_description" value="Main Description" />
-                            <textarea name="home_description" id="home_description" rows="3"
-                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm">{{ $settings['home_description'] ?? 'Exploring the boundaries between light and shadow...' }}</textarea>
+                            <x-textarea name="home_description" id="home_description" rows="3"
+                                class="mt-1 block w-full">{{ $settings['home_description'] ?? 'Exploring the boundaries between light and shadow...' }}</x-textarea>
                         </div>
 
                         <div class="flex items-center gap-4">

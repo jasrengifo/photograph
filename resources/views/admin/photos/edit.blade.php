@@ -102,10 +102,10 @@
                         <div class="space-y-4">
                             <div>
                                 <x-input-label for="description" value="Description" />
-                                <textarea name="description" id="description" rows="4"
-                                    class="mt-1 block w-full rounded-md shadow-sm"
+                                <x-textarea name="description" id="description" rows="4"
+                                    class="mt-1 block w-full"
                                     placeholder="Photo details..."
-                                    required>{{ old('description', $photo->description ?? '') }}</textarea>
+                                    required>{{ old('description', $photo->description ?? '') }}</x-textarea>
                                 <x-input-error class="mt-2" :messages="$errors->get('description')" />
                             </div>
 
