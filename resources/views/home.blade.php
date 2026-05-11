@@ -25,17 +25,17 @@
             <div class="flex flex-col items-center leading-none">
                 <span
                     class="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight font-display text-white mb-[-0.1em]">
-                    {{ \App\Models\Setting::where('key', 'home_title_1')->value('value') ?? 'Capturing' }}
+                    {{ \App\Models\Setting::where('key', 'home_title_1')->value('value') ?? 'Capturando' }}
                 </span>
                 <span class="text-4xl md:text-6xl lg:text-8xl font-light italic font-display text-white">
-                    {{ \App\Models\Setting::where('key', 'home_title_2')->value('value') ?? 'The Unseen' }}
+                    {{ \App\Models\Setting::where('key', 'home_title_2')->value('value') ?? 'Lo Invisible' }}
                 </span>
             </div>
 
             <!-- Description -->
             <p
                 class="text-slate-300 text-sm md:text-lg font-light leading-relaxed max-w-lg md:max-w-2xl mx-auto mt-4 mix-blend-screen">
-                {{ \App\Models\Setting::where('key', 'home_description')->value('value') ?? 'Exploring the boundaries between light and shadow across the landscapes of South America and Europe.' }}
+                {{ \App\Models\Setting::where('key', 'home_description')->value('value') ?? 'Explorando los límites entre la luz y la sombra a través de los paisajes de Sudamérica y Europa.' }}
             </p>
 
             <!-- Buttons -->
