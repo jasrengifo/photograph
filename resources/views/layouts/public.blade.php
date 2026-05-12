@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-background-light text-slate-900 font-display overflow-hidden selection:bg-primary selection:text-white">
-    <div class="flex h-screen w-full flex-col md:flex-row">
+    <div class="flex h-screen w-full flex-col sm:flex-row">
         <x-side-nav />
 
         <main
