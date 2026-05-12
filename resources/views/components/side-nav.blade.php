@@ -1,8 +1,15 @@
+<style>
+    @media (min-width: 768px) {
+        .md-hidden-custom { display: none !important; }
+        .md-flex-custom { display: flex !important; }
+    }
+</style>
+
 <nav x-data="{ mobileMenuOpen: false }"
     class="flex-none w-full md:w-80 h-auto md:h-screen bg-[#121118] border-b md:border-b-0 md:border-r border-white/5 flex flex-col justify-between z-50 relative shadow-2xl">
     
     <!-- Mobile Header Bar -->
-    <div class="flex md:hidden items-center justify-between px-6 py-4 bg-[#121118] border-b border-white/5 relative z-50">
+    <div class="flex md-hidden-custom items-center justify-between px-6 py-4 bg-[#121118] border-b border-white/5 relative z-50">
         <div class="flex items-center gap-3">
             <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-white/10"
                 style="background-image: url('{{ Storage::url('photos/ruthg.jpg') }}');">
@@ -16,11 +23,11 @@
     </div>
 
     <!-- Sidebar Content -->
-    <div class="flex-col h-full justify-between md:flex" 
+    <div class="flex-col h-full justify-between md-flex-custom" 
          :class="mobileMenuOpen ? 'flex' : 'hidden'">
         <div class="flex flex-col p-8 overflow-y-auto no-scrollbar">
             <!-- Logo Section (Desktop only) -->
-            <div class="hidden md:flex flex-col gap-4 mb-10">
+            <div class="hidden md-flex-custom flex-col gap-4 mb-10">
                 <div class="flex items-center gap-4">
                     <div class="bg-center bg-no-repeat bg-cover rounded-full size-12 ring-2 ring-white/10"
                         style="background-image: url('{{ Storage::url('photos/ruthg.jpg') }}');">
