@@ -1,8 +1,8 @@
 <nav x-data="{ mobileMenuOpen: false }"
-    class="flex-none w-full lg:w-80 h-auto lg:h-screen bg-[#121118] border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col justify-between z-50 relative shadow-2xl">
+    class="flex-none w-full md:w-80 h-auto md:h-screen bg-[#121118] border-b md:border-b-0 md:border-r border-white/5 flex flex-col justify-between z-50 relative shadow-2xl">
     
     <!-- Mobile Header Bar (Visible on mobile/tablet) -->
-    <div class="lg:hidden flex items-center justify-between px-6 py-4 bg-[#121118] border-b border-white/5 relative z-50">
+    <div class="md:hidden flex items-center justify-between px-6 py-4 bg-[#121118] border-b border-white/5 relative z-50">
         <div class="flex items-center gap-3">
             <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-white/10"
                 style="background-image: url('{{ Storage::url('photos/ruthg.jpg') }}');">
@@ -16,10 +16,10 @@
     </div>
 
     <!-- Sidebar Content (Always flex on desktop, toggled on mobile) -->
-    <div :class="mobileMenuOpen ? 'flex' : 'hidden lg:flex'" class="flex-col h-full justify-between">
+    <div :class="mobileMenuOpen ? 'flex' : 'hidden md:flex'" class="md:flex flex-col h-full justify-between">
         <div class="flex flex-col p-8 overflow-y-auto no-scrollbar">
             <!-- Logo Section (Desktop only) -->
-            <div class="hidden lg:flex flex-col gap-4 mb-10">
+            <div class="hidden md:flex flex-col gap-4 mb-10">
                 <div class="flex items-center gap-4">
                     <div class="bg-center bg-no-repeat bg-cover rounded-full size-12 ring-2 ring-white/10"
                         style="background-image: url('{{ Storage::url('photos/ruthg.jpg') }}');">
